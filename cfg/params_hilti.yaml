@@ -19,12 +19,12 @@ dlio:
     imu: imu
 
   map:
-    waitUntilMove: false
+    waitUntilMove: true
     dense:
       filtered: false
     sparse:
       frequency: 1.0
-      leafSize: 0.25
+      leafSize: 0.2
 
   odom:
 
@@ -40,12 +40,12 @@ dlio:
 
     preprocessing:
       cropBoxFilter:
-        size: 1.0
+        size: 0.2
       voxelFilter:
         res: 0.2
 
     keyframe:
-      threshD: 1.0
+      threshD: 0.2
       threshR: 45.0
 
     submap:
@@ -56,7 +56,7 @@ dlio:
     gicp:
       minNumPoints: 64
       kCorrespondences: 16
-      maxCorrespondenceDistance: 0.5
+      maxCorrespondenceDistance: 0.2
       maxIterations: 32
       transformationEpsilon: 0.01
       rotationEpsilon: 0.01
